@@ -4,16 +4,19 @@ import Home from "../Pages/Home/Home/Home";
 
 
 const router = createBrowserRouter([
-    path:'/',
-    Element:<Main></Main>,
-    children: [
-        {
-            path:'/',
-            element:<Home></Home>
-        }
-
-    ]
-
+    {
+        path:'/',
+        element:<Main></Main>,
+        children: [
+            {
+                path:'/',
+                element:<Home></Home>
+            },
+            {
+                
+            }
+        ]
+    }
 ]);
 
 export default router;
