@@ -2,8 +2,9 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            <p className='text-center'><small>copyrights of my News</small></p>
+        <div className='text-center'>
+            <small>dont copy right news</small>
+            
         </div>
     );
 };
