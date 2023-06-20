@@ -17,7 +17,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/category/:id',
-                element:<Category></Category>
+                element:<Category></Category>,
+                loader: 
             }
         ]
     },
