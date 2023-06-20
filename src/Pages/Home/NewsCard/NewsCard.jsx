@@ -1,16 +1,21 @@
+import moment from 'moment/moment';
 import React from 'react';
 import { Card, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaRegBookmark, FaShareAlt } from 'react-icons/fa';
 
 const NewsCard = ({news}) => {
     const {_id, title, details, image_url, author} = news;
     return (
         <Card className="mb-4">
-      <Card.Header className='d-flex'>
+      <Card.Header className='d-flex align-items-center'>
         <Image style={{height: '40px'}} src={author?.img} roundedCircle />
+        <div className='ps-2 flex-grow-1'>
+            <p className='mb-0'>{author?.name}</p>
+            <p><small> {moment(author?.published_date).format('YYYY MM D')} </small></p>
+        </div>
         <div>
-            <p>{author?.name}</p>
-            <p><small> {moment(author?.publish_date).format(YY-MM-DD)} </small></p>
+          <FaRegBookmark></FaRegBookmark> <FaShareAlt></FaShareAlt>
         </div>
       </Card.Header>
 
