@@ -1,5 +1,5 @@
 import moment from 'moment/moment';
-import React from 'react';
+// import React from 'react';
 import { Card, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaEye, FaRegBookmark, FaRegStar, FaShareAlt, FaStar } from 'react-icons/fa';

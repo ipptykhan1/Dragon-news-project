@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+// import React from 'react';
+import { Card, Row } from 'react-bootstrap';
 
 const EditiorsInsights = () => {
     return (
