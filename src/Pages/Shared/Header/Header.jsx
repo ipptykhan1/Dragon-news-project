@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../assets/logo.png'
 import moment from 'moment';
 import { Button, ButtonGroup, Container, Nav, Navbar } from 'react-bootstrap';
 import Marquee from 'react-fast-marquee';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProvider';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Header = () => {
+
+   const {user} = useContext(AuthContext);
+
     return (
         <div className='text-center'>
             <div>
@@ -35,7 +40,9 @@ const Header = () => {
            
           </Nav>
           <Nav>
-           
+           <Nav.Link eventKey={2} href="#memes">
+              <ButtonGroup className='fw-bold' > <FaUserCircle style={{fontSize: '1.8rem'}}></FaUserCircle> </ButtonGroup>
+            </Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               <ButtonGroup className='fw-bold' >Login</ButtonGroup>
             </Nav.Link>
