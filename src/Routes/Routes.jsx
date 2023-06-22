@@ -4,20 +4,35 @@ import Main from "../Layouts/Main";
 import Category from "../Pages/Home/Category/Category";
 import News from "../Pages/News/News/News";
 import NewssLayout from "../Layouts/NewssLayout";
+import LoginLayout from "../Layouts/LoginLayout";
+import Login from "../Pages/Login/Login/Login";
+import Register from "../Pages/Login/Register/Register";
 
 
 const router = createBrowserRouter([
     {
         path:'/',
-        element:<Main></Main>,
-        children: [
+        element:<LoginLayout></LoginLayout>,
+        children:[
             {
-                path:'/',
-                element:<Category></Category>,
-                loader: () => fetch(`http://localhost:5000/news`)
+                path:'login',
+                element:<Login></Login>
             },
             {
-                path:'/category/:id',
+                path:'register',
+                element:<Register></Register>
+            }
+
+        ]
+
+    },
+    {
+        path:'category',
+        element:<Main></Main>,
+        children: [
+
+            {
+                path:'id',
                 element:<Category></Category>,
                 loader: ({params}) => fetch(`http://localhost:5000/categories/
                 ${params.id}`)

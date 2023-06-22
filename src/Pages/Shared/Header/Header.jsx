@@ -5,12 +5,12 @@ import { Button } from 'react-bootstrap';
 import Marquee from 'react-fast-marquee';
 import './Header.css'
 
-import { AuthContext } from '../../../Providers/AuthProvider';
+
 
 
 const Header = () => {
 
-   const {user} = useContext(AuthContext);
+  
 
     return (
         <div className='text-center'>
